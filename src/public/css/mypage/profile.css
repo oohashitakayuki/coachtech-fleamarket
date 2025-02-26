@@ -1,0 +1,43 @@
+.profile {
+  margin-top: 60px;
+}
+
+.profile__content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 240px 50px 200px;
+}
+
+.profile__image {
+  width: 130px;
+  height: 130px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile__link {
+  font-size: 15px;
+  font-weight: bold;
+  padding: 5px 20px;
+}
+
+.tabs {
+  margin: 0 0 5px 150px;
+}
+
+.tab-switch {
+  font-weight: bold;
+  color: #5F5F5F;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tab-switch.active {
+  font-weight: bold;
+  color: #FF0000;
+}
+
+.tab-switch:last-child {
+  margin-left: 70px;
+}

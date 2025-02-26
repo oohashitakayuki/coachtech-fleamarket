@@ -6,9 +6,7 @@
 
 @section('content')
 <div class="login-form">
-  <div class="login-form__heading">
-    <h2>ログイン</h2>
-  </div>
+  <h2 class="login-form__heading">ログイン</h2>
   <form class="login-form__inner" action="/login" method="post" novalidate>
     @csrf
     <div class="login-form__group">
@@ -34,7 +32,7 @@
       </div>
     </div>
     <div class="login-form__button">
-      <button class="login-form__button-submit btn" type="submit">ログインする</button>
+      <button class="login-form__button-submit submit-button" type="submit">ログインする</button>
     </div>
   </form>
   <div class="register__link">

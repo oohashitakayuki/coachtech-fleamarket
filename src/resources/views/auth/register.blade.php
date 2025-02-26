@@ -6,9 +6,7 @@
 
 @section('content')
 <div class="register-form">
-  <div class="register-form__heading">
-    <h2>会員登録</h2>
-  </div>
+  <h2 class="register-form__heading">会員登録</h2>
   <form class="register-form__inner" action="/register" method="post" novalidate>
     @csrf
     <div class="register-form__group">
@@ -54,8 +52,9 @@
         {{ $message }}
         @enderror
       </div>
+    </div>
     <div class="register-form__button">
-      <button class="register-form__button-submit btn" type="submit">登録する</button>
+      <button class="register-form__button-submit submit-button" type="submit">登録する</button>
     </div>
   </form>
   <div class="login__link">

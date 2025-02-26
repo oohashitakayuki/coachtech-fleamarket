@@ -1,0 +1,35 @@
+.item-detail {
+  display: flex;
+}
+
+.item-detail__price {
+  display: flex;
+  align-items: center;
+}
+
+.item-detail__service {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100px;
+}
+
+.fa-star,
+.fa-comment {
+  font-size: 25px;
+}
+
+.like__button-submit {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.like__button-submit.active {
+  color: #F3F000;
+}
+
+.comment-form__group {
+  display: flex;
+  flex-direction: column;
+}

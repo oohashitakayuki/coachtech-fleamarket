@@ -1,0 +1,44 @@
+.register-form {
+  width: 40%;
+  margin: 60px auto;
+}
+
+.register-form__heading {
+  text-align: center;
+}
+
+.register-form__inner {
+  margin-top: 30px;
+}
+
+.register-form__group {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.register-form__group-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.register-form__label {
+  font-weight: bold;
+}
+
+.register-form__input {
+  height: 40px;
+}
+
+.register-form__button {
+  margin-top: 80px;
+  text-align: center;
+}
+
+.register-form__button-submit {
+  width: 100%;
+}
+
+.login__link {
+  margin-top: 20px;
+  text-align: center;
+}

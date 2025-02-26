@@ -1,0 +1,100 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 60px;
+  background: #000;
+}
+
+.header__logo {
+  width: 80%;
+  margin-left: 30px;
+}
+
+.item-search__keyword-input {
+  width: 300px;
+  height: 30px;
+  padding-left: 30px;
+}
+
+.header-nav__menu {
+  display: flex;
+}
+
+.header-nav__item {
+  margin-right: 20px;
+}
+
+.header-nav__item a {
+  color: #FFF;
+  text-decoration: none;
+}
+
+.header-nav__item:last-child a {
+  padding: 10px 18px;
+  color: #000;
+  background: #FFF;
+  border-radius: 3px;
+}
+
+.header-nav__button {
+  margin-right: 10px;
+  color: #FFF;
+  background: #000;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+.item-list {
+  width: 100%;
+  border-top: 1px solid #000;
+}
+
+.item__card {
+  display: inline-block;
+  width: 20%;
+  text-decoration: none;
+  position: relative;
+}
+
+.item__image {
+  width: 100%;
+}
+
+.item__name {
+  display: inline;
+  color: #000;
+}
+
+.upload-form__select-file {
+  display: none;
+}
+
+.upload-form__select-button {
+  padding: 5px 10px;
+}
+
+.submit-button {
+  height: 40px;
+  color: #FFF;
+  background: #FF5555;
+  font-size: 15px;
+  font-weight: 550;
+  border-radius: 3px;
+  border: none;
+  cursor: pointer;
+}
+
+.edit-button {
+  color: #FF5555;
+  background: #FFF;
+  border: 1px solid #FF5555;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.link-button {
+  color: #0077DE;
+  text-decoration: none;
+}
