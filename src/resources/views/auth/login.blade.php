@@ -11,7 +11,7 @@
     @csrf
     <div class="login-form__group">
       <div class="login-form__group-content">
-        <label class="login-form__label" for="email">ユーザー名/メールアドレス</label>
+        <label class="login-form__label" for="email">メールアドレス</label>
         <input class="login-form__input" type="email" name="email" id="email" value="{{ old('email') }}">
       </div>
       <div class="login-form__error-message">

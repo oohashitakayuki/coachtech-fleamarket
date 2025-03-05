@@ -7,15 +7,15 @@
 @section('content')
 <div class="profile">
   <div class="profile__content">
-    <img src="{{ Auth::user()->profile->profile_image ? asset('storage/' . Auth::user()->profile->profile_image) : asset('img/default-profile.jpg') }}" alt="プロフィール画像" class="profile__image">
+    <img src="{{ Auth::user()->profile->profile_image ? asset('storage/' . Auth::user()->profile->profile_image) : asset('img/default-profile.jpg') }}" alt="" class="profile__image">
     <h2 class="profile__user-name">{{ Auth::user()->profile->user_name }}</h2>
     <button onclick="location.href='/mypage/profile'" class="profile__link edit-button">プロフィールを編集</button>
   </div>
 
   <div class="item">
-    <div class="tabs">
-      <a href="{{ route('mypage.index', ['tab' => 'sell']) }}" class="tab-switch {{ $tab === 'sell' ? 'active' : '' }}">出品した商品</a>
-      <a href="{{ route('mypage.index', ['tab' => 'buy']) }}" class="tab-switch {{ $tab === 'buy' ? 'active' : '' }}">購入した商品</a>
+    <div class="item-tab">
+      <a href="{{ route('mypage.index', ['tab' => 'sell']) }}" class="item-tab__sell tab-switch {{ $tab === 'sell' ? 'active' : '' }}">出品した商品</a>
+      <a href="{{ route('mypage.index', ['tab' => 'buy']) }}" class="item-tab__buy tab-switch {{ $tab === 'buy' ? 'active' : '' }}">購入した商品</a>
     </div>
     <div class="item-list">
     @foreach ($items as $item)

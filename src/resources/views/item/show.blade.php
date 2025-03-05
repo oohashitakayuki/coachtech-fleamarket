@@ -30,11 +30,11 @@
           <i class="fa-regular fa-star"></i>
         </button>
         @endif
-        <span class="like__count">{{ $likeCount }}</span>
+        <span class="count__total">{{ $likeCount }}</span>
       </div>
       <div class="item-detail__comment">
         <i class="fa-regular fa-comment"></i>
-        <span class="comment__count">{{ $commentCount }}</span>
+        <span class="count__total">{{ $commentCount }}</span>
       </div>
     </div>
     <div class="item-detail__link">
@@ -48,18 +48,18 @@
       <h3 class="item-info__heading">商品の情報</h3>
       <table class="item-info__content">
         <tr class="item-info__category">
-          <th>カテゴリー</th>
+          <th class="confirm-category__label">カテゴリー</th>
           @foreach($item->categories as $category)
-          <td>{{ $category->name }}</td>
+          <td class="confirm-category__content">{{ $category->name }}</td>
           @endforeach
         </tr>
         <tr class="item-info__condition">
-          <th>商品の状態</th>
-          <td>{{ $item->condition }}</td>
+          <th class="confirm-condition__label">商品の状態</th>
+          <td class="confirm-condition__content">{{ $item->condition }}</td>
         </tr>
       </table>
     </div>
-    <div class="item-detail__comment-form">
+    <div class="comment-form">
       <h3 class="comment-form__heading">コメント({{ $commentCount }})</h3>
       <div class="comment-form__user-comment">
         @if($latestComment)

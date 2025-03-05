@@ -15,18 +15,28 @@
       <div class="exhibition-image__upload-form">
         <input class="upload-form__select-file" type="file" name="image" id="image" accept="image/*">
         <button class="upload-form__select-button edit-button" type="button" id="select-image">画像を選択する</button>
+        <div class="exhibition-image__error-message">
+          @error('image')
+          {{ $message }}
+          @enderror
+        </div>
       </div>
     </div>
     <div class="exhibition-detail">
       <h3 class="exhibition-detail__heading">商品の詳細</h3>
       <div class="exhibition-category">
         <p class="exhibition-category__heading">カテゴリー</p>
-        @foreach($categories as $category)
         <div class="exhibition-category__content">
+          @foreach($categories as $category)
           <input class="exhibition-category__checkbox" type="checkbox" name="categories[]" value="{{ $category->id }}" id="category-{{ $category->id }}">
           <label class="exhibition-category__label" for="category-{{ $category->id }}">{{ $category->name }}</label>
+          @endforeach
         </div>
-        @endforeach
+        <div class="exhibition-category__error-message">
+          @error('categories')
+          {{ $message }}
+          @enderror
+        </div>
       </div>
       <div class="exhibition-condition">
         <p class="exhibition-condition__heading">商品の状態</p>
@@ -37,32 +47,57 @@
           <option value="やや傷や汚れあり">やや傷や汚れあり</option>
           <option value="状態が悪い">状態が悪い</option>
         </select>
+        <div class="exhibition-condition__error-message">
+          @error('condition')
+          {{ $message }}
+          @enderror
+        </div>
       </div>
     </div>
     <div class="exhibition-info">
       <h3 class="exhibition-info__heading">商品名と説明</h3>
       <div class="exhibition-info__group">
-        <div class="exhibition-info__group-content">
-          <label class="exhibition-info__label" for="name">商品名</label>
-          <input class="exhibition-info__input" type="text" name="name" id="name">
+        <div class="exhibition-name">
+          <label class="exhibition-name__label" for="name">商品名</label>
+          <input class="exhibition-name__input" type="text" name="name" id="name">
+        </div>
+        <div class="exhibition-name__error-message">
+          @error('name')
+          {{ $message }}
+          @enderror
         </div>
       </div>
       <div class="exhibition-info__group">
-        <div class="exhibition-info__group-content">
-          <label class="exhibition-info__label" for="brand">ブランド名</label>
-          <input class="exhibition-info__input" type="text" name="brand" id="brand">
+        <div class="exhibition-brand">
+          <label class="exhibition-brand__label" for="brand">ブランド名</label>
+          <input class="exhibition-brand__input" type="text" name="brand" id="brand">
+        </div>
+        <div class="exhibition-brand__error-message">
+          @error('brand')
+          {{ $message }}
+          @enderror
         </div>
       </div>
       <div class="exhibition-info__group">
-        <div class="exhibition-info__group-content">
-          <label class="exhibition-info__label" for="description">商品の説明</label>
-          <textarea class="exhibition-info__textarea" name="description" id="description" cols="30" rows="10"></textarea>
+        <div class="exhibition-description">
+          <label class="exhibition-description__label" for="description">商品の説明</label>
+          <textarea class="exhibition-description__textarea" name="description" id="description" cols="30" rows="10"></textarea>
+        </div>
+        <div class="exhibition-description__error-message">
+          @error('description')
+          {{ $message }}
+          @enderror
         </div>
       </div>
       <div class="exhibition-info__group">
-        <div class="exhibition-info__group-content">
-          <label class="exhibition-info__label" for="price">販売価格</label>
-          <input class="exhibition-info__input" type="text" name="price" id="price">
+        <div class="exhibition-price">
+          <label class="exhibition-price__label" for="price">販売価格</label>
+          <input class="exhibition-price__input" type="text" name="price" id="price">
+        </div>
+        <div class="exhibition-price__error-message">
+          @error('price')
+          {{ $message }}
+          @enderror
         </div>
       </div>
     </div>

@@ -51,19 +51,19 @@
       </div>
     </div>
 
-    <table class="payment-form__confirm">
-      <tr>
-        <th>商品代金</th>
-        <td>{{ $item->price }}</td>
+    <table class="purchase-form__confirm">
+      <tr class="confirm-price">
+        <th class="confirm-price__label">商品代金</th>
+        <td class="confirm-price__content"><span class="confirm-price__price-yen">¥</span><p class="confirm-price__price-number">{{ number_format($item->price) }}</p></td>
       </tr>
-      <tr>
-        <th>支払い方法</th>
-        <td id="confirm-payment"></td>
+      <tr class="confirm-payment">
+        <th class="confirm-payment__label">支払い方法</th>
+        <td class="confirm-payment__content" id="confirm-payment"></td>
       </tr>
     </table>
 
-    <div class="payment-form__button">
-      <button class="payment-form__button-submit submit-button">購入する</button>
+    <div class="purchase-form__button">
+      <button class="purchase-form__button-submit submit-button">購入する</button>
     </div>
   </form>
 </div>

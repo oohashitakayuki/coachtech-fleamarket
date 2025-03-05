@@ -17,9 +17,9 @@
           $mylistParams['keyword'] = $keyword;
       }
   @endphp
-  <div class="tabs">
-    <a href="{{ route('item.index',  $recommendParams) }}" class="tab-switch {{ $tab === 'recommend' ? 'active' : '' }}">おすすめ</a>
-    <a href="{{ route('item.index', $mylistParams) }}" class="tab-switch {{ $tab === 'mylist' ? 'active' : '' }}">マイリスト</a>
+  <div class="item-tab">
+    <a href="{{ route('item.index',  $recommendParams) }}" class="item-tab__recommend tab-switch {{ $tab === 'recommend' ? 'active' : '' }}">おすすめ</a>
+    <a href="{{ route('item.index', $mylistParams) }}" class="item-tab__mylist tab-switch {{ $tab === 'mylist' ? 'active' : '' }}">マイリスト</a>
   </div>
   <div class="item-list">
     @forelse ($items as $item)
@@ -31,8 +31,7 @@
       <p class="item__name">{{ $item->name }}</p>
     </a>
     @empty
-    <p>表示する商品がありません。</p>
-  @endforelse
+    @endforelse
   </div>
 </div>
 @endsection

@@ -14,7 +14,7 @@
       <div class="profile-image__upload-form">
         <input class="upload-form__select-file" type="file" name="profile_image" id="profile_image" accept="image/*">
         <button class="upload-form__select-button edit-button" type="button" id="select-image">画像を選択する</button>
-        <div class="upload-form__error-message">
+        <div class="profile-image__error-message">
           @error('profile_image')
           {{ $message }}
           @enderror
