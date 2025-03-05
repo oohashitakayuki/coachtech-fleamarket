@@ -12,9 +12,16 @@
 }
 
 .item-search__keyword-input {
-  width: 300px;
-  height: 30px;
+  width: 390px;
+  height: 36px;
   padding-left: 30px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
+
+.item-search__keyword-input::placeholder {
+  color: #000000;
+  font-size: 15px;
 }
 
 .header-nav__menu {
@@ -25,19 +32,21 @@
   margin-right: 20px;
 }
 
-.header-nav__item a {
+.header-nav__login,
+.header-nav__mypage {
   color: #FFF;
   text-decoration: none;
 }
 
-.header-nav__item:last-child a {
+.header-nav__link {
   padding: 10px 18px;
   color: #000;
   background: #FFF;
   border-radius: 3px;
+  text-decoration: none;
 }
 
-.header-nav__button {
+.header-nav__logout {
   margin-right: 10px;
   color: #FFF;
   background: #000;
@@ -46,24 +55,49 @@
   cursor: pointer;
 }
 
+.item {
+  margin-top: 50px;
+}
+
+.item-tab {
+  padding-bottom: 5px;
+  border-bottom: 1px solid #000;
+}
+
+.tab-switch {
+  font-weight: bold;
+  color: #5F5F5F;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.tab-switch.active {
+  font-weight: bold;
+  color: #FF0000;
+}
+
 .item-list {
-  width: 100%;
-  border-top: 1px solid #000;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 50px 100px 0 150px;
 }
 
 .item__card {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
   width: 20%;
+  margin-right: 50px;
   text-decoration: none;
   position: relative;
 }
 
 .item__image {
   width: 100%;
+  border-radius: 3px;
 }
 
 .item__name {
-  display: inline;
+  margin-top: 3px;
   color: #000;
 }
 
@@ -80,7 +114,7 @@
   color: #FFF;
   background: #FF5555;
   font-size: 15px;
-  font-weight: 550;
+  font-weight: bold;
   border-radius: 3px;
   border: none;
   cursor: pointer;

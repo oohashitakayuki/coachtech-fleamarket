@@ -22,11 +22,16 @@
 }
 
 .register-form__label {
+  margin-bottom: 3px;
   font-weight: bold;
 }
 
 .register-form__input {
   height: 40px;
+}
+
+.register-form__error-message {
+  margin-top: 7px;
 }
 
 .register-form__button {

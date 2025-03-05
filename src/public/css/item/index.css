@@ -1,25 +1,9 @@
-.item {
-  margin-top: 45px;
+.item-tab__recommend {
+  margin-left: 160px;
 }
 
-.tabs {
-  margin: 0 0 5px 150px;
-}
-
-.tab-switch {
-  font-weight: bold;
-  color: #5F5F5F;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.tab-switch.active {
-  font-weight: bold;
-  color: #FF0000;
-}
-
-.tab-switch:last-child {
-  margin-left: 70px;
+.item-tab__mylist {
+  margin-left: 60px;
 }
 
 .sold-label {

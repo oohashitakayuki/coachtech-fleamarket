@@ -4,40 +4,33 @@
 
 .profile__content {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
-  margin: 0 240px 50px 200px;
+  margin-left: 120px;
 }
 
 .profile__image {
   width: 130px;
   height: 130px;
-  object-fit: cover;
   border-radius: 50%;
+  object-fit: cover;
+}
+
+.profile__user-name {
+  margin-left: 70px;
 }
 
 .profile__link {
   font-size: 15px;
   font-weight: bold;
   padding: 5px 20px;
+  margin-left: 180px;
 }
 
-.tabs {
-  margin: 0 0 5px 150px;
+.item-tab__sell {
+  margin-left: 160px;
 }
 
-.tab-switch {
-  font-weight: bold;
-  color: #5F5F5F;
-  text-decoration: none;
-  cursor: pointer;
-}
-
-.tab-switch.active {
-  font-weight: bold;
-  color: #FF0000;
-}
-
-.tab-switch:last-child {
-  margin-left: 70px;
+.item-tab__buy {
+  margin-left: 30px;
 }

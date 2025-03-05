@@ -1,16 +1,20 @@
 .purchase-form {
-  margin: 60px 40px 0 40px;
+  width: 880px;
+  margin: 60px auto;
 }
 
 .purchase-form__inner {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  height: 330px;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 530px;
+  column-gap: 60px;
 }
 
 .purchase-info {
   display: flex;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #000;
 }
 
 .purchase-info__image {
@@ -19,16 +23,124 @@
   object-fit: cover;
 }
 
+.purchase-info__summary {
+  margin-left: 30px;
+}
+
 .purchase-info__name {
   display: inline;
 }
 
 .purchase-info__price {
   display: flex;
-  align-items: center;
+  align-items: baseline;
+  margin-top: 7px;
+}
+
+.purchase-info__price-yen {
+  margin-right: 5px;
+}
+
+.purchase-info__price-number {
+  display: contents;
+  font-size: 20px;
+}
+
+.payment-method {
+  height: 147px;
+  padding-bottom: 50px;
+  position: relative;
+  border-bottom: 1px solid #000;
+}
+
+.payment-method::after {
+  position: absolute;
+  top: 54%;
+  right: 52%;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #000;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: "";
+  transform: translateY(-50%);
+}
+
+.payment-method__heading {
+  font-weight: bold;
+}
+
+.payment-method__option {
+  width: 215px;
+  margin: 10px 0 0 50px;
+  padding: 5px;
+  appearance: none;
+}
+
+.payment-method__error-message {
+  margin: 3px 0 0 50px;
+}
+
+.shipping-address {
+  padding-bottom: 30px;
+  border-bottom: 1px solid #000;
 }
 
 .shipping-address__head {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.shipping-address__heading {
+  font-weight: bold;
+}
+
+.shipping-address__confirm {
+  margin: 10px 0 0 30px;
+}
+
+.shipping-address__radio {
+  font-weight: bold;
+}
+
+.shipping-address__address,
+.shipping-address__building {
+  margin-left: 18px;
+}
+
+.shipping-address__error-message {
+  margin: 3px 0 0 18px;
+}
+
+.purchase-form__confirm {
+  width: 100%;
+  text-align: center;
+  border: 1px solid #000;
+}
+
+.confirm-price {
+  border-bottom: 1px solid #000;
+}
+
+.confirm-price__label,
+.confirm-payment__label {
+  font-weight: normal;
+}
+
+.confirm-price__price-yen {
+  margin-right: 5px;
+}
+
+.confirm-price__price-number {
+  display: inline;
+  font-size: 17px;
+}
+
+.purchase-form__button {
+  margin-top: 50px;
+}
+
+.purchase-form__button-submit {
+  width: 100%;
 }

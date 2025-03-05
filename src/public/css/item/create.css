@@ -1,0 +1,161 @@
+.exhibition-form {
+  width: 540px;
+  margin: 50px auto;
+}
+
+.exhibition-form__heading {
+  text-align: center;
+}
+
+.exhibition-image__heading {
+  display: inline;
+  font-weight: bold;
+}
+
+.exhibition-image__preview {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.exhibition-image__upload-form {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.exhibition-detail__heading,
+.exhibition-info__heading {
+  padding-bottom: 3px;
+  font-size: 21px;
+  color: #5F5F5F;
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+
+.exhibition-category__heading {
+  font-weight: bold;
+}
+
+.exhibition-category__content {
+  display: flex;
+  flex-wrap: wrap;
+  height: 145px;
+}
+
+.exhibition-category__checkbox {
+  display: none;
+}
+
+.exhibition-category__label {
+  margin: 0 6px 30px 6px;
+  padding: 3px 12px;
+  font-size: 13px;
+  color: #FF5555;
+  background: #FFF;
+  text-align: center;
+  border: 1px solid #FF5555;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.exhibition-category__checkbox:checked+label {
+  color: #FFF;
+  background: #FF5555;
+}
+
+.exhibition-condition {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.exhibition-condition::after {
+  position: absolute;
+  top: 58px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border-top: 8px solid #000;
+  border-right: 5px solid transparent;
+  border-left: 5px solid transparent;
+  content: "";
+  transform: translateY(-50%);
+  pointer-events: none;
+  z-index: 10;
+}
+
+.exhibition-condition__heading {
+  font-weight: bold;
+}
+
+.exhibition-condition__select {
+  width: 100%;
+  height: 36px;
+  padding-left: 7px;
+  border-radius: 3px;
+  appearance: none;
+}
+
+.exhibition-info__heading {
+  padding-bottom: 3px;
+  text-align: left;
+  border-bottom: 1px solid #000;
+}
+
+.exhibition-info__group {
+  margin-top: 25px;
+}
+
+.exhibition-name,
+.exhibition-brand,
+.exhibition-description,
+.exhibition-price {
+  display: flex;
+  flex-direction: column;
+}
+
+.exhibition-name__label,
+.exhibition-brand__label,
+.exhibition-description__label,
+.exhibition-price__label {
+  margin-bottom: 3px;
+  font-weight: bold;
+}
+
+.exhibition-name__input,
+.exhibition-brand__input,
+.exhibition-price__input {
+  height: 40px;
+}
+
+.exhibition-price {
+  position: relative;
+}
+
+.exhibition-price::before {
+  font: var(--fa-font-solid);
+  content: '\f157';
+  position: absolute;
+  top: 60%;
+  right: 96%;
+}
+
+.exhibition-price__input {
+  padding-left: 25px;
+}
+
+.exhibition-image__error-message,
+.exhibition-category__error-message,
+.exhibition-condition__error-message,
+.exhibition-name__error-message,
+.exhibition-brand__error-message,
+.exhibition-description__error-message,
+.exhibition-price__error-message {
+  margin-top: 7px;
+}
+
+.exhibition-form__button {
+  margin-top: 100px;
+}
+
+.exhibition-form__button-submit {
+  width: 100%;
+}

@@ -22,11 +22,16 @@
 }
 
 .login-form__label {
+  margin-bottom: 3px;
   font-weight: bold;
 }
 
 .login-form__input {
   height: 40px;
+}
+
+.login-form__error-message {
+  margin-top: 7px;
 }
 
 .login-form__button {

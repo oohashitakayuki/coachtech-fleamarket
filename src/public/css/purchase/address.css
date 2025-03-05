@@ -1,39 +1,44 @@
-.edit-address {
+.address-form {
   width: 40%;
-  margin: 80px auto;
+  margin: 30px auto;
 }
 
-.edit-address__heading {
+.address-form__heading {
   text-align: center;
 }
 
-.edit-address__inner {
-  margin-top: 30px;
+.address-form__inner {
+  margin-top: 70px;
 }
 
-.edit-address__group {
+.address-form__group {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 
-.edit-address__group-content {
+.address-form__group-content {
   display: flex;
   flex-direction: column;
 }
 
-.edit-address__label {
+.address-form__label {
+  margin-bottom: 3px;
   font-weight: bold;
 }
 
-.edit-address__input {
+.address-form__input {
   height: 40px;
 }
 
-.edit-address__button {
+.address-form__error-message {
+  margin-top: 7px;
+}
+
+.address-form__button {
   margin-top: 80px;
   text-align: center;
 }
 
-.edit-address__button-submit {
+.address-form__button-submit {
   width: 100%;
 }
