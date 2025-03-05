@@ -31,7 +31,7 @@ class ProfileRequest extends FormRequest
     public function messages()
     {
         return [
-            'profile_image.mimes' => '拡張子が.jpegもしくは.pngの画像ファイルを選択してください',
+            'profile_image.mimes' => 'プロフィール画像は拡張子が.jpegもしくは.pngの画像ファイルを選択してください',
         ];
     }
 }
