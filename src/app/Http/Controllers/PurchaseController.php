@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Http\Requests\AddressRequest;
+use App\Http\Requests\PurchaseRequest;
 use App\Models\Item;
 use App\Models\Profile;
 use Illuminate\Http\Request;
@@ -18,7 +20,7 @@ class PurchaseController extends Controller
         return view('purchase.checkout', compact('profile', 'item'));
     }
 
-    public function store(Request $request, $itemId)
+    public function store(PurchaseRequest $request, $itemId)
     {
         $user = Auth::user();
         $profile = $user->profile;
@@ -42,7 +44,7 @@ class PurchaseController extends Controller
         return view('purchase.address', compact('profile', 'item'));
     }
 
-    public function update(Request $request, $itemId)
+    public function update(AddressRequest $request, $itemId)
     {
         $user = Auth::user();
         $profile = $user->profile;
