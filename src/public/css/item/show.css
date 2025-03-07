@@ -1,6 +1,6 @@
 .item-detail {
   display: flex;
-  width: 50%;
+  width: 740px;
   margin: 60px auto;
 }
 
@@ -11,6 +11,7 @@
 }
 
 .item-detail__content {
+  width: 330px;
   margin-left: 60px;
 }
 
@@ -78,7 +79,7 @@
 }
 
 .item-detail__link-button {
-  width: 330px;
+  width: 100%;
 }
 
 .item-description {
@@ -110,7 +111,7 @@
 }
 
 .confirm-category__label {
-  padding-right: 30px;
+  padding-right: 50px;
   text-align: left;
 }
 
@@ -124,12 +125,13 @@
 }
 
 .confirm-condition__label {
-  padding-right: 45px;
+  text-align: left;
 }
 
 .confirm-condition__content {
+  display: inline;
+  margin-left: 13px;
   font-size: 13px;
-  text-align: center;
 }
 
 .comment-form {
@@ -184,7 +186,7 @@
 }
 
 .comment-form__textarea {
-  width: 330px;
+  width: 100%;
 }
 
 .comment-form__error-message {
@@ -196,5 +198,5 @@
 }
 
 .comment-form__button-submit {
-  width: 330px;
+  width: 100%;
 }
