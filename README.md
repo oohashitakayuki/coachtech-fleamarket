@@ -21,24 +21,42 @@
 **インストール**
 
 1. プロジェクトのクローン
-   `git clone git@github.com:oohashitakayuki/coachtech-fleamarket.git`
+
+```
+git clone git@github.com:oohashitakayuki/coachtech-fleamarket.git
+```
 
 2. プロジェクトディレクトリに移動
-   `cd coachtech-fleamarket`
+
+```
+cd coachtech-fleamarket
+```
 
 3. docker-compose コマンドを実行
-   `docker-compose up -d —build`
+
+```
+docker-compose up -d —build
+```
 
 **Laravel 環境構築**
 
 1. docker-compose コマンドで PHP コンテナにログイン
-   `docker-compose exec php bash`
+
+```
+docker-compose exec php bash
+```
 
 2. Composer パッケージのインストール
-   `composer install`
+
+```
+composer install
+```
 
 3. 「.env.example」ファイルをコピーして「.env」ファイルを作成
-   `cp .env.example .env`
+
+```
+cp .env.example .env
+```
 
 4. 「.env」ファイルにおいて環境変数を設定
 
@@ -52,10 +70,16 @@ DB_PASSWORD=laravel_pass
 ```
 
 5. アプリケーションキーの作成
-   `php artisan key:generate`
+
+```
+php artisan key:generate
+```
 
 6. マイグレーションおよびシーディングの実行
-   ` php artisan migrate:fresh --seed`
+
+```
+php artisan migrate:fresh --seed
+```
 
 ## 使用技術(実行環境)
 
@@ -89,7 +113,7 @@ DB_PASSWORD=laravel_pass
 
 **メール認証**
 
-Mailtrap を利用しています。
+Mailtrap を利用しています。  
 Mailtrap を利用してメール認証をする場合は、「.env」ファイルを以下のように設定します。
 
 ```
@@ -104,7 +128,10 @@ MAIL_FROM_NAME="${APP_NAME}"
 ```
 
 キャッシュをクリアします。
-`php artisan config:clear`
+
+```
+php artisan config:clear
+```
 
 ## ER 図
 
