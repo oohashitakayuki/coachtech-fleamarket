@@ -23,12 +23,18 @@ class AddressRequest extends FormRequest
      */
     public function rules()
     {
-        return [
-            'user_name' => 'required|string',
-            'postal_code' => 'required|regex:/^\d{3}-\d{4}$/',
-            'address' => 'required|string',
-            'building' => 'required|string',
+        $rules = [
+            'user_name'    => 'required|string',
+            'postal_code'  => 'required|regex:/^\d{3}-\d{4}$/',
+            'address'      => 'required|string',
+            'building'     => 'required|string',
         ];
+
+        if ($this->routeIs('purchase.update')) {
+            unset($rules['user_name']);
+        }
+
+        return $rules;
     }
 
     public function messages()
