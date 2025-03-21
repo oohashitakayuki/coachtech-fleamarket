@@ -46,6 +46,7 @@ class ExhibitionRequest extends FormRequest
             'categories.required' => 'カテゴリーを選択してください',
             'condition.required' => '商品の状態を選択してください',
             'price.required' => '販売価格を入力してください',
+            'price.integer' => '販売価格は数値で入力してください',
             'price.min' => '販売価格は0円以上で入力してください',
         ];
     }
