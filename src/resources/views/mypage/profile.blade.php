@@ -18,12 +18,12 @@
       <a href="{{ route('mypage.index', ['tab' => 'buy']) }}" class="item-tab__buy tab-switch {{ $tab === 'buy' ? 'active' : '' }}">購入した商品</a>
     </div>
     <div class="item-list">
-    @foreach ($items as $item)
-    <a href="{{ route('item.show', ['item_id' => $item->id]) }}" class="item__card">
-      <img class="item__image" src="{{ asset('storage/' . $item->image) }}" alt="商品画像">
-      <p class="item__name">{{ $item->name }}</p>
-    </a>
-    @endforeach
+      @foreach ($items as $item)
+      <a href="{{ route('item.show', ['item_id' => $item->id]) }}" class="item__card">
+        <img class="item__image" src="{{ asset('storage/' . $item->image) }}" alt="商品画像">
+        <p class="item__name">{{ $item->name }}</p>
+      </a>
+      @endforeach
     </div>
   </div>
 </div>

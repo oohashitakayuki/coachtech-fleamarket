@@ -18,7 +18,7 @@
       }
   @endphp
   <div class="item-tab">
-    <a href="{{ route('item.index',  $recommendParams) }}" class="item-tab__recommend tab-switch {{ $tab === 'recommend' ? 'active' : '' }}">おすすめ</a>
+    <a href="{{ route('item.index', $recommendParams) }}" class="item-tab__recommend tab-switch {{ $tab === 'recommend' ? 'active' : '' }}">おすすめ</a>
     <a href="{{ route('item.index', $mylistParams) }}" class="item-tab__mylist tab-switch {{ $tab === 'mylist' ? 'active' : '' }}">マイリスト</a>
   </div>
   <div class="item-list">

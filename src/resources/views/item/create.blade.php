@@ -92,7 +92,7 @@
       <div class="exhibition-info__group">
         <div class="exhibition-price">
           <label class="exhibition-price__label" for="price">販売価格</label>
-          <input class="exhibition-price__input" type="text" name="price" id="price">
+          <input class="exhibition-price__input" type="number" name="price" id="price">
         </div>
         <div class="exhibition-price__error-message">
           @error('price')
