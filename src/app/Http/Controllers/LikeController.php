@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\like;
+use App\Models\Like;
 use App\Models\Profile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
