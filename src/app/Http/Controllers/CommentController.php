@@ -13,13 +13,11 @@ class CommentController extends Controller
     {
         $user = Auth::user();
         $profile = $user->profile;
-        if (!$profile->is_comment($itemId)) {
-            $profile->comments()->create([
-                'profile_id' => $profile->id,
-                'item_id'    => $itemId,
-                'comment'    => $request->input('comment'),
-            ]);
-        }
+        $profile->comments()->create([
+            'profile_id' => $profile->id,
+            'item_id'    => $itemId,
+            'comment'    => $request->input('comment'),
+        ]);
 
         return back();
     }
