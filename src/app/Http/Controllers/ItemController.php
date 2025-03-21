@@ -14,7 +14,7 @@ class ItemController extends Controller
     {
         $tab = $request->query('tab', 'recommend');
         $keyword = $request->query('keyword', '');
-        $query = Item::query()->keywordSearch($keyword);
+        $query = Item::query();
 
         if ($tab === 'mylist') {
             if (Auth::check()) {
@@ -25,11 +25,14 @@ class ItemController extends Controller
                 $query->whereRaw('0 = 1');
             }
         } else {
+            $query = Item::query();
             if (Auth::check()) {
                 $profileId = Auth::user()->profile->id;
                 $query->where('profile_id', '!=', $profileId);
             }
         }
+
+        $query->keywordSearch($keyword);
 
         $items = $query->with('purchases')->get();
         foreach ($items as $item) {
