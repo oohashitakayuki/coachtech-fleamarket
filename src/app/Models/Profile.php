@@ -47,9 +47,4 @@ class Profile extends Model
     {
         return $this->hasMany(Comment::class);
     }
-
-    public function is_comment($itemId)
-    {
-        return $this->comments()->where('item_id', $itemId)->exists();
-    }
 }
