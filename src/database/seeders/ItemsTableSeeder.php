@@ -136,7 +136,7 @@ class ItemsTableSeeder extends Seeder
         $item10 = Item::create([
             'profile_id' => 3,
             'name' => 'メイクセット',
-            'image' => 'item_images/外出メイクアップセット.jpg',
+            'image' => 'item_images/Cosmetics+Ladies.jpg',
             'brand' => 'LUNASOL',
             'condition' => '目立った傷や汚れなし',
             'description' => '便利なメイクアップセット',
